@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="height:18vh">
+</div>
+
+<div class="container d-flex justify-content-center">
+    <div class="d-inline-flex justify-content-center flex-column">
+    <div style="height:30vh">
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+            Are you sure you want delete the Post?
+        <input class="btn btn-primary" type="submit" value="Yes">
+        <a href="{% url 'home' %}" class="btn btn-secondary">No</a>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
